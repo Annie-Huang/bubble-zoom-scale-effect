@@ -44,8 +44,19 @@
 }
 
 /* Select the .avator slibing that is before and after the current element */
-.avatar:hover + .avatar,
+/*.avatar:hover + .avatar,
 .avatar:has(+ .avatar:hover) {
   scale: 1.5;
   border-color: lime;
+}*/
+/* We don't need to add the selector for support because :has got pretty good coverage in browsers support already
+   But the reason this is a good practise is that we won't want to have after sibling working and not before sibling.
+   So if things are meant to be together, group them within the same @support selector.
+*/
+@supports selector(:has(+ *)) {
+  .avatar:hover + .avatar,
+  .avatar:has(+ .avatar:hover) {
+    scale: 1.5;
+    border-color: lime;
+  }
 }
