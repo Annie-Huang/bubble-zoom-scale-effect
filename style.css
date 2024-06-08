@@ -1,6 +1,8 @@
 .avatars {
   --avatar-count: 10;
   --avatar-size: 70px;
+  --transition-duration: 500ms;
+
   /* don't change this */
   --column-size: calc(var(--avatar-size) / 2);
 
@@ -9,10 +11,10 @@
   grid-template-columns: repeat(var(--avatar-count), var(--column-size));
 
   /* Don't add transition on things like margin, padding etc, which is low performance animation. Do it on grid layout.*/
-  transition: grid-template-columns 500ms;
+  transition: grid-template-columns var(--transition-duration);
   /* Only add the transition delay when it's on off hover because we have transition-delay 0ms below.
      So when it's off hover, it will scale back to original size before the whole container collapses. */
-  transition-delay: 500ms;
+  transition-delay: var(--transition-duration);
 }
 
 /* focus-within is for tab function */
@@ -30,7 +32,7 @@
   border: 5px solid white;
   box-shadow: 0.25rem 0.25rem 0.5rem hsl(0 0% 0% / 0.2);
 
-  transition: scale 500ms;
+  transition: scale var(--transition-duration);
 }
 
 .avatar:hover,
