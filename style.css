@@ -9,6 +9,10 @@
   grid-template-columns: repeat(var(--avatar-count), var(--column-size));
 }
 
+.avatars:hover {
+  --column-size: calc(var(--avatar-size) * 1.5);
+}
+
 .avatar {
   width: var(--avatar-size);
   aspect-ratio: 1;
