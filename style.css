@@ -1,4 +1,11 @@
+.avatars {
+  --avatar-size: 100px;
+}
+
 .avatar {
+  width: var(--avatar-size);
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 100vw;
   border: 5px solid white;
   box-shadow: 0.25rem 0.25rem 0.5rem hsl(0 0% 0% / 0.2);
