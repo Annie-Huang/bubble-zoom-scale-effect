@@ -25,4 +25,11 @@
   border-radius: 100vw;
   border: 5px solid white;
   box-shadow: 0.25rem 0.25rem 0.5rem hsl(0 0% 0% / 0.2);
+
+  transition: scale 500ms;
+}
+
+.avatar:hover,
+.avatar:focus {
+  scale: 2;
 }
