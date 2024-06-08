@@ -1,10 +1,12 @@
 .avatars {
-  --avatar-size: 100px;
+  --avatar-count: 10;
+  --avatar-size: 70px;
+  /* don't change this */
   --column-size: calc(var(--avatar-size) / 2);
 
   display: grid;
   /* Very smart way to keep things overlap on 1/2 size through grid */
-  grid-template-columns: repeat(10, var(--column-size));
+  grid-template-columns: repeat(var(--avatar-count), var(--column-size));
 }
 
 .avatar {
