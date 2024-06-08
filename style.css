@@ -7,6 +7,9 @@
   display: grid;
   /* Very smart way to keep things overlap on 1/2 size through grid */
   grid-template-columns: repeat(var(--avatar-count), var(--column-size));
+
+  /* Don't add transition on things like margin, padding etc, which is low performance animation. Do it on grid layout.*/
+  transition: grid-template-columns 500ms;
 }
 
 .avatars:hover {
