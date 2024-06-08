@@ -32,6 +32,9 @@
 .avatar:hover,
 .avatar:focus {
   scale: 2;
+
+  /* The one we hovering on should be always in front from its before and after sibling */
+  z-index: 2;
 }
 
 /* Select the .avator slibing that is before and after the current element */
