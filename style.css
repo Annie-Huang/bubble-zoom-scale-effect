@@ -12,7 +12,9 @@
   transition: grid-template-columns 500ms;
 }
 
-.avatars:hover {
+/* focus-within is for tab function */
+.avatars:hover,
+.avatars:focus-within {
   --column-size: calc(var(--avatar-size) * 1.5);
 }
 
