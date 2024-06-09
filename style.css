@@ -1,6 +1,6 @@
 .avatars {
   --avatar-count: 10;
-  --avatar-size: 70px;
+  --avatar-size: 80px;
   --transition-duration: 500ms;
 
   /* don't change this */
@@ -15,6 +15,10 @@
   /* Only add the transition delay when it's on off hover because we have transition-delay 0ms below.
      So when it's off hover, it will scale back to original size before the whole container collapses. */
   transition-delay: var(--transition-duration);
+
+  max-width: 80vw;
+  padding-block: 4rem;
+  overflow-x: auto;
 }
 
 /* focus-within is for tab function */
